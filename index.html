@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RE Listing Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <main>
+      <form>
+        <label for="main">
+          Main level
+          <textarea
+            id="main"
+            type="text"
+            placeholder="e.g. gleaming hardwood floors, open floor plan, beautiful gourmet kitchen"
+          ></textarea>
+        </label>
+
+        <label for="second">
+          Second level
+          <textarea
+            id="second"
+            type="text"
+            placeholder="e.g. office, media room, full bathroom, storage area"
+          ></textarea>
+        </label>
+
+        <label for="third">
+          Third level
+          <textarea
+            id="third"
+            type="text"
+            placeholder="e.g. screened-in porch, in-law suite, extensive bonus room"
+          ></textarea>
+        </label>
+
+        <label for="terrace">
+          Terrace level
+          <textarea
+            id="terrace"
+            type="text"
+            placeholder="e.g. huge unfinished basement, exercise room, beautifully-finished basement"
+          ></textarea>
+        </label>
+
+        <label for="garage">
+          Garage
+          <textarea
+            id="garage"
+            type="text"
+            placeholder="e.g. three car ports, work bench, considerable space"
+          ></textarea>
+        </label>
+
+        <label for="landscape">
+          Landscape
+          <textarea
+            id="landscape"
+            type="text"
+            placeholder="e.g. joyous palm trees, beautiful patio, 0.59 acres, lush garden"
+          ></textarea>
+        </label>
+
+        <label for="location">
+          Location
+          <textarea
+            id="location"
+            type="text"
+            placeholder="e.g. quiet neighborhood, great shops, Lake Lanier, convenience to downtown"
+          ></textarea>
+        </label>
+
+        <div>
+          <label>Home type</label>
+          <div class="radio-container">
+            <label for="standard" class="radio-label">
+              <input
+                type="radio"
+                id="standard"
+                name="home-type"
+                value="standard"
+                checked
+              />
+              Standard
+            </label>
+
+            <label for="luxury" class="radio-label">
+              <input type="radio" id="luxury" name="home-type" value="luxury" />
+              Luxury
+            </label>
+          </div>
+        </div>
+
+        <button class="generate-btn">Generate listing</button>
+      </form>
+
+      <div class="modal">
+        <div class="dim-overlay"></div>
+
+        <div class="result">
+          <div class="btn-container">
+            <button class="random-btn">
+              <i class="fa fa-dice"></i>
+            </button>
+            <button class="close-btn">
+              <i class="fa fa-times"></i>
+            </button>
+          </div>
+
+          <div class="description"></div>
+        </div>
+      </div>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

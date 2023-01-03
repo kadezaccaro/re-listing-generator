@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Listing Generator & Randomizer</title>
+
+    <style>
+      body {
+        padding-top: 20px;
+        margin: auto;
+        font-family: helvetica, sans-serif;
+        width: 800px;
+        background-color: #4ecdc4;
+      }
+
+      h1 {
+        font-weight: bold;
+        font-size: 54px;
+        margin-bottom: 40px;
+        color: #292f36;
+      }
+
+      h2 {
+        font-family: helvetica;
+        font-weight: normal;
+        font-size: 15px;
+        margin-bottom: 40px;
+        color: #292f36;
+        line-height: 22px;
+      }
+
+      label {
+        font-weight: bold;
+        color: #292f36;
+      }
+
+      textarea[type="text"] {
+        font-family: helvetica;
+        font-weight: normal;
+        font-size: 15px;
+        margin-top: 10px;
+        margin-bottom: 40px;
+        width: 800px;
+        background-color: #f7fff7;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+
+      p {
+        font-size: 20px;
+        background: #ffe66d;
+        color: #292f36;
+        padding: 10px;
+        visibility: hidden;
+        line-height: 33px;
+      }
+
+      .randomize {
+        width: 800px;
+        font-weight: bold;
+        border-style: solid;
+        border-color: #292f36;
+        background-color: #292f36;
+        border-width: 3px;
+        color: #f7fff7;
+        padding: 25px 35px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 35px;
+        margin-top: 50px;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+      }
+      .randomize:hover {
+        background-color: #ffe66d;
+        color: #292f36;
+      }
+
+      .hint {
+        font-size: 20px;
+        text-align: center;
+        font-weight: normal;
+      }
+
+      .description {
+        max-width: 800px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>🏠🎲</h1>
+    <h1>
+      Real Estate Listing<br />
+      Generator & Randomizer
+    </h1>
+    <h2>
+      This application was designed to be an efficient way of rendering a
+      preliminary draft <br />
+      which you should further edit to completion. <br /><br />Usage Guidelines:
+      <ol>
+        <li>
+          Enter all home details separated by a comma then select "Standard" or
+          "Luxury".
+        </li>
+        <li>Click "GENERATE LISTING" until desirable.</li>
+        <li>Copy + paste draft into your text editor to finalize.</li>
+      </ol>
+    </h2>
+    <div>
+      <label for="mainlevel">Main level features:</label>
+      <textarea
+        id="mainlevel"
+        type="text"
+        placeholder="EXAMPLE: gleaming hardwood floors, open floor plan, beautiful gourmet kitchen"
+      ></textarea>
+      <br />
+      <label for="secondlevel">Second level features:</label>
+      <textarea
+        id="secondlevel"
+        type="text"
+        placeholder="EXAMPLE: office, media room, full bathroom, storage area"
+      ></textarea>
+      <br />
+      <label for="thirdlevel">Third level features:</label>
+      <textarea
+        id="thirdlevel"
+        type="text"
+        placeholder="EXAMPLE: screened-in porch, in-law suite, extensive bonus room"
+      ></textarea>
+      <br />
+      <label for="terracelevel">Terrace level features:</label>
+      <textarea
+        id="terracelevel"
+        type="text"
+        placeholder="EXAMPLE: huge unfinished basement, exercise room, beautifully-finished basement"
+      ></textarea>
+      <br />
+      <label for="garage">Garage feautures:</label>
+      <textarea
+        id="garage"
+        type="text"
+        placeholder="EXAMPLE: considerable space, three car ports, work bench, storage for all of your lake toys"
+      ></textarea>
+      <br />
+      <label for="landscape">Landscape features:</label>
+      <textarea
+        id="landscape"
+        type="text"
+        placeholder="EXAMPLE: joyous palm trees, beautiful patio, 0.59 acres, lush garden"
+      ></textarea>
+      <br />
+      <label for="locationz">Locational benefits:</label>
+      <textarea
+        id="locationz"
+        type="text"
+        placeholder="EXAMPLE: quiet neighborhood, great shops, Lake Lanier, convenience to downtown Gainesville"
+      ></textarea>
+    </div>
+
+    <!--Home status radio buttons-->
+    <div>
+      <label for="standard">Standard</label
+      ><input
+        id="standard"
+        type="radio"
+        name="homestatus"
+        value="standard"
+        checked
+      />
+      <label for="luxury">Luxury</label
+      ><input id="luxury" type="radio" name="homestatus" value="luxury" />
+    </div>
+
+    <div>
+      <button class="randomize">
+        GENERATE LISTING <br /><span class="hint"
+          >(Click again to randomize as necessary)</span
+        >
+        <br />
+        🏠👇🎲
+      </button>
+    </div>
+
+    <p class="description"></p>
+
+    <script src="old.js"></script>
+  </body>
+</html>
